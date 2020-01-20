@@ -1,0 +1,49 @@
+@import './variables.scss';
+
+.button {
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid $bc-blue;
+    border-radius: 1em;
+    background-color: $bc-lightblue;
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    color: $c-blue;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .button:hover {
+    background-color: $bc-darkBlue;
+    color: $c-black;
+    }
+  
+  .register-button {
+    margin-top: 20px;
+    line-height: 50px;
+  }
+  
+  .init-button {
+    margin-top: 40vh;
+    width: 200px;
+    height: 75px;
+    line-height: 75px;
+  }
+
+  .submit-button,
+  .close-button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      line-height: 40px;
+  }
+  
+  .close-button {
+    margin-left: 5px;
+  }
+
+  .filter-buttons {
+    margin: 15px 0;
+    &__button {
+      padding: 5px 10px;
+      margin: 0 15px;
+    }
+  }

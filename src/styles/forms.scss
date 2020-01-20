@@ -1,0 +1,62 @@
+@import './variables.scss';
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0,0,0, 0.5);
+  z-index: 1;
+}
+
+.form {
+  margin-top: 30px;
+  width: 30vw;
+  min-width: 350px;
+  height: 500px;
+  background-color: $bc-lightblue;
+  border-radius: 10%;
+  overflow: visible;
+  margin: 15vh auto;
+}
+
+.title {
+  padding: 20px 0;
+  background-color: $bc-blue;
+  overflow: hidden;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+.inputs {
+  padding-top: 50px;
+  min-width: 300px;
+  max-width: 20vw;
+  margin: auto;
+  &__input {
+    border: 1px solid $c-blue;
+    outline-color: $bc-darkBlue;
+  }
+  &__input::placeholder {
+    color: $c-blue;
+  }
+}
+.username {
+  color: $c-blue;
+}
+
+.label {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media(max-width: 768px) {
+  .form{
+    min-width: 300px;
+  }
+}

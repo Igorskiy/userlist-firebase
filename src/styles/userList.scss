@@ -1,0 +1,33 @@
+@import './variables.scss';
+
+.users-list {
+  position: relative;
+  width: 90vw;
+  max-width: 1980px;
+  margin: auto;
+  border: 2px solid;
+  border-radius: 1em;
+  overflow: hidden;
+  border-collapse: collapse;
+  cursor: pointer;
+  &__header {
+    background-color: $bc-blue;
+  }
+  &__user:nth-child(even) {
+    background-color: $bc-lightblue;
+  }
+  &__table-column {
+    width: 18vw;
+    max-width: 396px;
+  }
+}
+
+.tool-icon {
+  margin: 0 10px;
+}
+
+@media(max-width: 768px) {
+  .users-list{
+    font-size: 11px;
+  }
+}

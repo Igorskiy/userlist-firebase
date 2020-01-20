@@ -1,0 +1,18 @@
+@import './forms.scss';
+@import './userList.scss';
+@import './buttons.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+  
+.App {
+  text-align: center;
+}
+
+.link {
+  text-decoration: inherit;
+  color: inherit;
+}
