@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import * as inputActions from '../store/reducers/inputReducer';
 import * as selectors from '../store/selectors';
 import { editUser } from '../store/thunks';
+import { debounce } from '../misc/helpers';
 
 const EditForm = ({
   setSurname,
@@ -24,6 +25,10 @@ const EditForm = ({
       setIsActive(user.isActive)
     }, [setIsActive, user.isActive]
   );
+  
+  const debouncedSetName = debounce(setName, 300);
+  const debouncedSetSurname = debounce(setSurname, 300);
+  const debouncedSetPhoneNumber = debounce(setPhoneNumber, 300);
 
     return (
     <div className="popup">
@@ -40,7 +45,7 @@ const EditForm = ({
               defaultValue={user.name}
               className="inputs__input"
               placeholder="имя пользователя"
-              onChange={e => setName(e.target.value)}
+              onChange={e => debouncedSetName(e.target.value)}
             />
           </label>
           <label className="label">
@@ -50,7 +55,7 @@ const EditForm = ({
               defaultValue={user.surname}
               className="inputs__input"
               placeholder="фамилия пользователя"
-              onChange={e => setSurname(e.target.value)}
+              onChange={e => debouncedSetSurname(e.target.value)}
             />
           </label>
           <label className="label">
@@ -60,7 +65,7 @@ const EditForm = ({
               defaultValue={user.phoneNumber}
               className="inputs__input"
               placeholder="моб. номер пользователя"
-              onChange={e => setPhoneNumber(e.target.value)}
+              onChange={e => debouncedSetPhoneNumber(e.target.value)}
             />
           </label>
           <label className="label">
